@@ -44,7 +44,7 @@ s.reducefn = reducefn
 
 results = s.run_server(password="changeme")
 
-w = csv.writer(open("C:\\Users\\875203.PUCMINAS\\git\\big-data\\join\\RESULT_1.3.csv","w"))
+w = csv.writer(open("C:\\Users\\875203.PUCMINAS\\git\\big-data\\join\\RESULT_1.3.csv","w"), delimiter=' ', quotechar='|', quoting=csv.QUOTE_MINIMA)
 for k, v in results.items():
 	w.writerow([k, str(v).replace("[", "").replace("]","" ).replace("'", "").replace(" ", "")])
 
